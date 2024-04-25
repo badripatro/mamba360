@@ -163,32 +163,11 @@ Table: Test accuracy on the LRA benchmark tasks (Tay et al., 2020). "✗" indica
 
 ##  Multivariate Time series benchmark Datasets
 
-
-
-It uses prediction lengths  \(T \in \{96, 192, 336, 720\}\) for all the datasets for lookup window 96. The best results are in **bold** and the second best is <ins>underlined</ins>.
-
-| Models | Metric | Simba | TimesNet | Crossformer | PatchTST | ETSFormer | DLinear | FEDFormer | Autoformer | Pyraformer | MTGNN |
-|--------|--------|-------|----------|-------------|----------|-----------|---------|-----------|------------|------------|-------|
-| ETTm1  | 96     | **0.324** | **0.360** | <ins>0.338</ins> | <ins>0.375</ins> | 0.349     | 0.395   | 0.339     | 0.377      | 0.475      | 0.543 |
-|        | 192    | **0.363** | **0.382** | <ins>0.374</ins> | <ins>0.387</ins> | 0.405     | 0.411   | 0.376     | 0.392      | 0.557      | 0.537 |
-|        | 336    | **0.395** | **0.405** | 0.410         | <ins>0.411</ins> | 0.432     | 0.431   | <ins>0.408</ins> | 0.417      | 0.754      | 0.655 |
-|        | 720    | **0.451** | **0.437** | <ins>0.478</ins> | <ins>0.450</ins> | 0.487     | 0.463   | 0.499     | 0.461      | 0.908      | 0.724 |
-| ETTm2  | 96     | **0.177** | **0.263** | <ins>0.187</ins> | <ins>0.267</ins> | 0.208     | 0.292   | 0.192     | 0.273      | 0.507      | 0.299 |
-|        | 192    | **0.245** | **0.306** | <ins>0.249</ins> | <ins>0.309</ins> | 0.263     | 0.332   | 0.252     | 0.314      | 0.673      | 0.328 |
-|        | 336    | **0.304** | **0.343** | 0.321         | <ins>0.351</ins> | 0.337     | 0.369   | <ins>0.318</ins> | 0.357      | 1.201      | 0.374 |
-|        | 720    | **0.400** | **0.399** | <ins>0.408</ins> | <ins>0.403</ins> | 0.429     | 0.430   | 0.413     | 0.416      | 3.625      | 0.459 |
-
-
-
-
-
-
-  
 **Table:** Multivariate long-term forecasting results: It uses prediction lengths \(T \in \{96, 192, 336, 720\}\) for all the datasets for lookup window 96. The best results are in **bold** and the second best is <ins>underlined</ins>. This table is adapted from the SiMBA paper [@patro2024simba].
 
-|              |Models | Simba |       | TimesNet |       | Crossformer |       | PatchTST |        | ETSFormer |        | DLinear |        | FEDFormer |        | Autoformer |        | Pyraformer |        | MTGNN |
-|              |  Metric |  MSE   | MAE   | MSE   | MAE   | MSE   | MAE   | MSE   | MAE   | MSE   | MAE   | MSE   | MAE   | MSE   | MAE   | MSE   | MAE   | MSE   | MAE   | MSE   | MAE   |
-|--------------|--------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+|    Datasets   | Models | Simba   |          | TimesNet |          | Crossformer  |         | PatchTST  |         | ETSFormer  |         | DLinear |         | FEDFormer  |         | Autoformer |         | Pyraformer |         | MTGNN   |         |
+|---------------|--------|---------|----------|----------|---------|--------------|---------|-----------|---------|------------|---------|---------|---------|------------|---------|------------|---------|------------|---------|---------|---------|
+|               | Metric | MSE     | MAE      | MSE      | MAE     | MSE          | MAE     | MSE       | MAE     | MSE        | MAE     | MSE     | MAE     | MSE        | MAE     | MSE        | MAE     | MSE        | MAE     | MSE     | MAE     |
 | ETTm1        | 96     | **0.324** | **0.360** | 0.338 | 0.375 | 0.349 | 0.395 | 0.339 | 0.377 | 0.375 | 0.398 | 0.345 | 0.372 | 0.379 | 0.419 | 0.505 | 0.475 | 0.543 | 0.510 | 0.379 | 0.446 |
 |              | 192    | **0.363** | **0.382** | 0.374 | 0.387 | 0.405 | 0.411 | 0.376 | 0.392 | 0.408 | 0.410 | 0.380 | 0.389 | 0.426 | 0.441 | 0.553 | 0.496 | 0.557 | 0.537 | 0.470 | 0.428 |
 |              | 336    | **0.395** | **0.405** | 0.410 | 0.411 | 0.432 | 0.431 | 0.408 | 0.417 | 0.435 | 0.428 | 0.413 | 0.413 | 0.445 | 0.459 | 0.621 | 0.537 | 0.754 | 0.655 | 0.473 | 0.430 |
@@ -217,6 +196,7 @@ It uses prediction lengths  \(T \in \{96, 192, 336, 720\}\) for all the datasets
 |              | 192    | 0.222 | **0.260** | **0.219** |0.261 | 0.219 | 0.279 | 0.219 | **0.271** | 0.237 | 0.312 | 0.237 | 0.296 | 0.276 | 0.336 | 0.307 | 0.367 | 0.739 | 0.624 | 0.263 | 0.322 |
 |              | 336    |**0.275** | **0.297** | 0.280 | 0.306 | 0.287 | 0.332 | 0.277 | **0.321** | 0.298 | 0.353 | 0.283 | 0.335 | 0.339 | 0.380 | 0.359 | 0.395 | 1.004 | 0.753 | 0.354 | 0.396 |
 |              | 720    |**0.350** | **0.349** | 0.365 | 0.359 | 0.368 | 0.378 | 0.365 | **0.367** | 0.352 | 0.288 | 0.345 | 0.381 | 0.403 | 0.428 | 0.419 | 0.428 | 1.420 | 0.934 | 0.409 | 0.371 |
+
 
 ##  Comparison with SoTA methods on 8 benchmark datasets for Multimodal Applications
 
